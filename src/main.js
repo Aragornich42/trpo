@@ -1,3 +1,4 @@
+import './main.css';
 let map = new Map();
 //lowerCase
 map.set("а", "a");
