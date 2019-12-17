@@ -1,4 +1,5 @@
 import './main.css';
+
 let map = new Map();
 //lowerCase
 map.set("а", "a");
@@ -87,5 +88,30 @@ function buttonClick()
 	let word = document.getElementById("input").value;
 	document.getElementById("output").value = translit(word);
 }
+
+describe("Тестируем слова", function() {
+	
+	let words = [{
+		ru: "Привет!",
+		en: "Privet!",
+	},
+	{
+		ru: "Щука и Ем&^#34))(",
+		en: "Schuka i Em&^#34))(",
+	},
+	{
+		ru: "Привет! Я Max!",
+		en: "Privet! Ja Max!",
+	}];
+	
+	words.forEach((item)=>{
+		it(`${item.ru} => ${item.en}`, function(){
+			assert.equal(translit(item.ru), item.en);
+		});
+	});
+	
+});
+
+mocha.run();
 
 document.getElementById("button").onclick = buttonClick;
