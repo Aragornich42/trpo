@@ -11,13 +11,16 @@
 </head>
 
 <body>
-	<textarea id="input" cols=50 rows=5 placeholder="Введите текст и нажмите на кнопку Транслит." class="input"></textarea>
+	<div class="input">
+		<textarea id="input" cols=50 rows=5 placeholder="Введите текст и нажмите на кнопку Транслит."></textarea>
+	</div>
 	<div class="arrow">
 		<p></p>
 		<p></p>
 		&ensp; -> &ensp;
 	</div>
-	<textarea id="output" cols=50 rows=5 placeholder="Тут будет результат." disabled></textarea>
-	<p></p>
+	<div>
+		<textarea id="output" cols=50 rows=5 placeholder="Тут будет результат." disabled></textarea>
+	</div>
 	<input id="button" type="submit" value="Транслит"></input>
 </body>
